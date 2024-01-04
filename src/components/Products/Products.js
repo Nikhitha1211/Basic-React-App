@@ -10,8 +10,9 @@ const Products = ({ onAddItem, onRemoveItem, eventState }) => {
     useEffect(() => {
         async function fetchItems() {
             try {
-                const response = await axios.get('https://react-guide-2021-default-rtdb.firebaseio.com/items.json')
+                const response = await axios.get('https://react-project-1b63b-default-rtdb.firebaseio.com/items.json')
                 const data = response.data
+                console.log(data)
                 const transformedData = data.map((item, index) => {
                     return {
                         ...item,
